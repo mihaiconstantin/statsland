@@ -24,6 +24,7 @@ class Question:
     concept = None
     useAi = True
 
+
     # Scatter plot.
     def _createScatterPlotFigure(self, xAxisTitle, yAxisTitle):
         # Generate some random data.
@@ -45,6 +46,7 @@ class Question:
         # Return the figure.
         return figure
 
+
     # Constructor.
     def __init__(self, variable1, variable2, context, concept, useAi):
         self.variable1 = variable1
@@ -52,6 +54,7 @@ class Question:
         self.context = context
         self.concept = concept
         self.useAi = useAi
+
 
     # Craft question.
     def craftQuestion(self, client):
@@ -65,6 +68,7 @@ class Question:
             "\n",
             "- the statistical concept the student is trying to master is: '", self.concept, "'."
         ])
+
 
         # Obtain a question via the `OpenAI` API.
         self._response = client.chat.completions.create(
@@ -81,6 +85,7 @@ class Question:
             ]
         )
 
+
     # Generate visualization.
     def getVisualization(self):
         # Return a visualization (e.g., a scatter plot for the sake of example).
@@ -95,6 +100,7 @@ class Question:
 
         # Return a response as an image.
         return f"data:image/png;base64, { encoded_image }"
+
 
     # Get question.
     def getQuestion(self):
