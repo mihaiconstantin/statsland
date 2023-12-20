@@ -9,7 +9,7 @@ import utils as utils
 
 # Set OpenAI API key.
 aiClient = OpenAI(
-  api_key = utils.get_env_value("OPENAI_API_KEY")
+    api_key = utils.get_env_value("OPENAI_API_KEY")
 )
 
 # Make the Flask app.
@@ -26,7 +26,7 @@ def question():
     return render_template("question.html")
 
 
-@app.route("/craft", methods=["POST"])
+@app.route("/craft", methods = ["POST"])
 def craft():
     if request.method == "POST":
         # Create a question object from the form data.
@@ -43,16 +43,3 @@ def craft():
 
         # Return the question template.
         return render_template("craft.html", question = question)
-
-
-@app.route('/plot.png')
-def plot_png(question: Question):
-    # Get a figure.
-    figure = question.getVisualization()
-
-    # Render the figure.
-    output = io.BytesIO()
-    FigureCanvas(figure).print_png(output)
-
-    # Return a response as an image.
-    return Response(output.getvalue(), mimetype='image/png')
