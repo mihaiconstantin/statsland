@@ -13,15 +13,3 @@ def get_env_value(key):
 
     # Return the value.
     return value
-
-
-# Function to catch exceptions in other calls and return the error message.
-def catch(fun, *args, **kwargs):
-    # Try.
-    try:
-        # Run the function and return.
-        return fun(*args, **kwargs)
-    # Catch errors.
-    except Exception as e:
-        # Return the error message.
-        return str(e)
