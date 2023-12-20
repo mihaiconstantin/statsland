@@ -1,0 +1,43 @@
+/*
+    Utilities.
+*/
+:root {
+    --padding: 1rem;
+    --border-radius: 1rem;
+    --box-shadow-1: 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23);
+    --box-shadow-2: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.box {
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-1);
+}
+
+.container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 2.5rem;
+}
+
+
+.description {
+    margin-top: 2rem;
+}
+
+button > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.question-form, .question {
+    margin-top: 2rem;
+}
+
+.visualization {
+    margin-top: 1.5rem;
+}
+
+.answer {
+    margin-top: 2.5rem;
+}
