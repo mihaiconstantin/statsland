@@ -1,6 +1,7 @@
 # StatsLand
 
-Below you can find minimal information on how to run the application.
+Below you can find minimal information on how to run the proof of concept
+`StatsLand` application.
 
 ## Installation
 
